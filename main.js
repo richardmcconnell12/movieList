@@ -31,7 +31,7 @@ favMovies = [
 // Iterate through list of movie to ADD to DOM
 
 favMovies.forEach(function(movie) {
-    console.log(movie)
+
     const movieContainer = document.createElement("div");
     let movieTitle = document.createElement ("h4");
     movieTitle.textContent = movie.name
@@ -39,7 +39,8 @@ favMovies.forEach(function(movie) {
     movieDate.textContent = movie.releaseDate
     let movieUrl = document.createElement ("a");
     movieUrl.setAttribute("href", movie.url)
-    movieUrl.textContent = movie.url
+    movieUrl.setAttribute("target", "_blank")
+    movieUrl.textContent = "Movie URL"
 
 
     contentContainer.appendChild(movieContainer)
